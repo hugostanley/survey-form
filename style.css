@@ -221,6 +221,7 @@ label, span {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-top: 10rem;
     }
 
     .firstContainer {
