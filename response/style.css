@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.containerOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.thankCon {
+    /* border: 2px solid black; */
+    width: 35rem;
+    height: 30rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px 25px 25px 25px;
+    /* background-image: url('../images/green.jpg');
+    background-position: center;
+    background-size: cover; */
+    background-color: rgb(5,44,27);
+    box-shadow: 5px 10px 18px #000000;
+    padding-top: 8rem;
+}
+
+p{
+    color: rgb(209,211,206);
+    font-size: 3rem;
+}
+
+#checkLogo {
+    height: 6rem;
+    width: auto;
+    
+}
+
+div {
+    /* border: 2px solid black; */
+}
+
+span {
+    color: rgb(209,211,206);
+    font-size: 1.4rem;
+}
+
+.text {
+    text-align: center;
+}
+
