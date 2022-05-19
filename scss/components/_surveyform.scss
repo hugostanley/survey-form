@@ -1,0 +1,153 @@
+@use "../abstracts/colorsFonts" as c;
+@use "../abstracts/mixins" as a;
+
+.header {
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+  color: c.$primary-light;
+}
+
+#name-label,
+#email-label {
+  width: 17.5rem;
+}
+
+#phone-number-label,
+#number-label,
+#email-label,
+#name-label {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.userName,
+.userAge,
+.emailAdd,
+.phoneNum,
+.notes {
+  @include a.survey-divs;
+}
+
+.userAge,
+.phoneNum {
+  width: 44.6%;
+}
+
+.notes {
+  @include a.flex(false);
+  padding-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.notes {
+  label {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-family: c.$font-family_2;
+    color: c.$primary-light;
+  }
+}
+
+label {
+  span {
+    font-family: c.$font-family_2;
+    color: c.$primary-light;
+  }
+}
+
+#survey-form {
+  margin-top: -1.3rem;
+}
+
+.phoneAge {
+  @include a.flex(false);
+}
+
+input {
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: c.$primary-light;
+}
+
+.userGender {
+  @include a.flex(false, flex-start, false);
+  gap: 6rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  width: 15rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.trees {
+  @include a.flex(false);
+  gap: 5rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.location {
+  padding: 0.1rem;
+  padding-left: 0.3rem;
+  margin-top: -0.3rem;
+}
+
+#message {
+  width: 20rem;
+  background-color: c.$primary-light;
+}
+
+.leftText {
+  text-align: right;
+  padding: 2rem;
+  color: #073521;
+}
+
+h1,
+h2,
+h3 {
+  @include a.headers();
+}
+
+#submit {
+  @include a.flex(center, false, center);
+  font-family: c.$font-family_2;
+  background-color: c.$primary-green;
+  color: c.$white;
+  margin-top: 3rem;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+  font-size: 1rem;
+}
+
+.treeItems {
+  @include a.flex(false);
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.options {
+  margin-left: 0.7rem;
+  margin-top: 2rem;
+}
+
+#logoSubmit {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 0rem;
+  padding: 0;
+}
+
+#dropdown {
+  color: c.$primary-light;
+}

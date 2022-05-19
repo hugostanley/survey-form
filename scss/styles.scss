@@ -1,49 +1,39 @@
+@use "./abstracts" as a;
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: none;
+  @include a.reset();
 }
 
 body {
-  background-image: url("./images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
+  @include a.backgroundProp();
   height: 100vh;
 }
 
 .mainContainer {
-  display: flex;
-  align-items: center;
+  @include a.flex(center, false, center);
   height: 70vh;
-  justify-content: center;
   margin-top: 8rem;
   border-radius: 25px;
 }
 
 .firstContainer {
-  width: 26rem;
-  height: 40rem;
+  @include a.flex(false, column, false);
+  @include a.container-hw();
   border-radius: 0px 25px 25px 0px;
   box-shadow: 1px 10px 20px #000000;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
+  color: a.$white;
   padding-left: 2.5rem;
   padding-top: 7rem;
   background: radial-gradient(black, #073521);
 }
 
 .secondContainer {
-  width: 26rem;
-  height: 40rem;
+  @include a.container-hw;
   border-radius: 25px 0px 0px 25px;
   box-shadow: 5px 10px 18px #000000;
-  background-image: url("./images/pexels-scott-webb-1048035.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../images/pexels-scott-webb-1048035.jpg");
+  @include a.backgroundProp;
 }
 
 .header {
@@ -66,41 +56,39 @@ body {
   margin: 0.3rem;
 }
 
-.userName {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem;
+.userName,
+.userAge,
+.emailAdd,
+.phoneNum,
+.notes {
+  @include a.survey-divs;
 }
 
-.userAge {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem;
-  width: 44.6%;
-}
-
-.emailAdd {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem;
-}
-
+.userAge,
 .phoneNum {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem;
   width: 44.6%;
 }
 
 .notes {
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem;
+  @include a.flex(false);
   padding-left: 0.8rem;
   margin-top: 0.5rem;
 }
-.notes label {
-  margin-left: 0rem;
+
+.notes {
+  label {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-family: a.$font-family_2;
+    color: a.$primary-light;
+  }
+}
+
+label {
+  span {
+    font-family: a.$font-family_2;
+    color: a.$primary-light;
+  }
 }
 
 #survey-form {
@@ -108,26 +96,18 @@ body {
 }
 
 .phoneAge {
-  display: flex;
-}
-
-label {
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: rgb(215, 214, 210);
+  @include a.flex(false);
 }
 
 input {
   font-size: 0.8rem;
   border-style: none;
   border-radius: 0.5rem;
-  background-color: rgb(215, 214, 210);
+  background-color: a.$primary-light;
 }
 
 .userGender {
-  display: flex;
-  justify-content: flex-start;
+  @include a.flex(false, flex-start, false);
   gap: 6rem;
   padding: 0.3rem;
   padding-left: 1rem;
@@ -137,7 +117,7 @@ input {
 }
 
 .trees {
-  display: flex;
+  @include a.flex(false);
   gap: 5rem;
   padding: 0.3rem;
   margin-top: 0.5rem;
@@ -152,7 +132,7 @@ input {
 
 #message {
   width: 20rem;
-  background-color: rgb(215, 214, 210);
+  background-color: a.$primary-light;
 }
 
 .leftText {
@@ -161,22 +141,17 @@ input {
   color: #073521;
 }
 
-h1 {
-  letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
-}
-
-h2 {
-  letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
-}
-
+h1,
+h2,
 h3 {
-  letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
+  @include a.headers();
 }
 
 #submit {
+  @include a.flex(center, false, center);
+  font-family: a.$font-family_2;
+  background-color: a.$primary-green;
+  color: a.$white;
   margin-top: 3rem;
   margin-left: 0.8rem;
   padding: 0.5rem;
@@ -184,25 +159,14 @@ h3 {
   width: 6rem;
   height: 3rem;
   border-radius: 0.5rem;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
-  background-color: #256348;
-  display: flex;
-  align-items: center;
   cursor: pointer;
-  color: white;
   border-style: none;
   font-size: 1rem;
-  justify-content: center;
-}
-
-span {
-  font-family: "Source Sans Pro", sans-serif;
-  color: rgb(215, 214, 210);
 }
 
 .treeItems {
-  display: flex;
+  @include a.flex(false);
   text-align: left;
   margin-left: 0.5rem;
 }
@@ -220,14 +184,12 @@ span {
 }
 
 #dropdown {
-  color: rgb(215, 214, 210);
+  color: a.$primary-light;
 }
 
 @media all and (max-width: 1060px) {
   .mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include a.flex(space-around, column, false);
     margin-top: 10rem;
   }
 
@@ -244,10 +206,7 @@ span {
     height: 30rem;
   }
 
-  input {
-    font-size: 0.8rem;
-  }
-
+  input,
   label {
     font-size: 0.8rem;
   }
@@ -262,5 +221,3 @@ span {
     margin-top: 0.2rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

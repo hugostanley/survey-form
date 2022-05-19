@@ -1,124 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
     <title>Survey Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="mainContainer">
-        <div class="secondContainer">
-            <div class="leftText">
-                <h1 class="headerLeft">Save Trees </h1>
-                <h2 class="headerLeft">Save Lives</h2>
-            </div>
+      <div class="secondContainer">
+        <div class="leftText">
+          <h1 class="headerLeft">Save Trees</h1>
+          <h2 class="headerLeft">Save Lives</h2>
         </div>
-        <div class="firstContainer">
-            <div class="header">
-                <h1 id="title">Plant Trees</h1>
-                <h3>Plant now, its free.</h3> <!--must be paragraph-->
-            </div>
-            <form id="survey-form" action="./response/response.html">
-                <div class="userName">
-                    <label for="name-label">Name</label>
-                    <input type="text" name="fullName" id="name-label" required placeholder="Full name">
-                </div>
-
-                <div class="emailAdd">
-                    <label for="email-label">Email</label>
-                    <input type="email" name="email" id="email-label" required placeholder="example@gmail.com">
-                </div>
-
-                <div class="phoneAge">
-                    <div class="phoneNum">
-                        <label for="phone-number-label">Phone Number</label>
-                        <input type="number" name="phoneNumber" id="phone-number-label" required placeholder="09987654321">
-                    </div>
-
-                    <div class="userAge">
-                        <label for="number-label">Age</label>
-                        <input type="number" name="age" id="number-label" required placeholder="13" min="13" max="160">
-                    </div>
-                </div>
-
-                <div class="userGender">
-                    <div class="male">
-                        <input type="radio" name="gender" id="male-label" value="male">
-                        <label for="male-label">Male</label>
-                    </div>
-                    <div class="female">
-                        <input type="radio" name="gender" id="female-label" value="female">
-                        <label for="female-label">Female</label>
-                    </div>
-                </div>
-                <span class="options">Options</span>
-                <div class="trees">
-                    <div class="firstTrees">
-                        <div class="treeItems">
-                            <input type="checkbox" name="trees" id="narra-label" value="narra">
-                            <label for="narra-label">Narra</label>
-                        </div>
-                        <div class="treeItems">
-                            <input type="checkbox" name="trees" id="pagatpat-label" value="pagatpat">
-                            <label for="pagatpat-label">Pagatpat</label>
-                        </div>
-                        <div class="treeItems">
-                            <input type="checkbox" name="trees" id="bungalon-label" value="bungalon">
-                            <label for="bungalon-label">Bungalon</label>
-                        </div>
-                    </div>
-                    <div class="secondTrees">
-                        <div class="treeItems">                        
-                            <input type="checkbox" name="trees" id="coconut-label" value="coconut">
-                            <label for="coconut-label">Coconut</label>
-                        </div>
-                        <div class="treeItems">                        
-                            <input type="checkbox" name="trees" id="babae-label" value="bakhaw-babae">                    
-                            <label for="babae-label">Bakhaw Babae</label>
-                        </div>
-                        <div class="treeItems">                        
-                            <input type="checkbox" name="trees" id="lalake-label" value="bakhaw-lalake">
-                            <label for="lalake-label">Bakhaw Lalake</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="location">
-                    <label for="dropdown">Choose a planting location</label>
-                    <select name="location" id="dropdown" required>
-                        <option value="Luzon">Luzon</option>
-                        <option value="Visayas">Visayas</option>
-                        <option value="Mindanao">Mindanao</option>
-                    </select>
-                </div>
-
-                <div class="notes">
-                    <label for="message">Notes</label>
-                    <textarea name="message" id="message" placeholder="Give your trees a little message!"></textarea>
-                </div>
-                
-                <button type="submit" id="submit"><img src="./images/kindpng_129012.png" alt="submitLogo" id="logoSubmit">Plant</button>
-            </form>
-
+      </div>
+      <div class="firstContainer">
+        <div class="header">
+          <h1 id="title">Plant Trees</h1>
+          <h3>Plant now, its free.</h3>
         </div>
+        <form id="survey-form" action="./response/response.html">
+          <div class="userName">
+            <label for="name-label">Name</label>
+            <input
+              type="text"
+              name="fullName"
+              id="name-label"
+              required
+              placeholder="Full name"
+            />
+          </div>
 
-        
+          <div class="emailAdd">
+            <label for="email-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email-label"
+              required
+              placeholder="example@gmail.com"
+            />
+          </div>
+
+          <div class="phoneAge">
+            <div class="phoneNum">
+              <label for="phone-number-label">Phone Number</label>
+              <input
+                type="number"
+                name="phoneNumber"
+                id="phone-number-label"
+                required
+                placeholder="09987654321"
+              />
+            </div>
+
+            <div class="userAge">
+              <label for="number-label">Age</label>
+              <input
+                type="number"
+                name="age"
+                id="number-label"
+                required
+                placeholder="13"
+                min="13"
+                max="160"
+              />
+            </div>
+          </div>
+
+          <div class="userGender">
+            <div class="male">
+              <input type="radio" name="gender" id="male-label" value="male" />
+              <label for="male-label">Male</label>
+            </div>
+            <div class="female">
+              <input
+                type="radio"
+                name="gender"
+                id="female-label"
+                value="female"
+              />
+              <label for="female-label">Female</label>
+            </div>
+          </div>
+          <span class="options">Options</span>
+          <div class="trees">
+            <div class="firstTrees">
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="narra-label"
+                  value="narra"
+                />
+                <label for="narra-label">Narra</label>
+              </div>
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="pagatpat-label"
+                  value="pagatpat"
+                />
+                <label for="pagatpat-label">Pagatpat</label>
+              </div>
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="bungalon-label"
+                  value="bungalon"
+                />
+                <label for="bungalon-label">Bungalon</label>
+              </div>
+            </div>
+            <div class="secondTrees">
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="coconut-label"
+                  value="coconut"
+                />
+                <label for="coconut-label">Coconut</label>
+              </div>
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="babae-label"
+                  value="bakhaw-babae"
+                />
+                <label for="babae-label">Bakhaw Babae</label>
+              </div>
+              <div class="treeItems">
+                <input
+                  type="checkbox"
+                  name="trees"
+                  id="lalake-label"
+                  value="bakhaw-lalake"
+                />
+                <label for="lalake-label">Bakhaw Lalake</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="location">
+            <label for="dropdown">Choose a planting location</label>
+            <select name="location" id="dropdown" required>
+              <option value="Luzon">Luzon</option>
+              <option value="Visayas">Visayas</option>
+              <option value="Mindanao">Mindanao</option>
+            </select>
+          </div>
+
+          <div class="notes">
+            <label for="message">Notes</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Give your trees a little message!"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="submit">
+            <img
+              src="./images/kindpng_129012.png"
+              alt="submitLogo"
+              id="logoSubmit"
+            />Plant
+          </button>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>

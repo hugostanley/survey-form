@@ -1,0 +1,38 @@
+@use "../abstracts/mixins" as a;
+@use "../abstracts/colorsFonts" as c;
+
+* {
+  @include a.reset();
+}
+
+body {
+  background-image: url("../images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
+  @include a.backgroundProp();
+  height: 100vh;
+}
+
+.mainContainer {
+  @include a.flex(center, false, center);
+  height: 70vh;
+  margin-top: 8rem;
+  border-radius: 25px;
+}
+
+.firstContainer {
+  @include a.flex(false, column, false);
+  @include a.container-hw();
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 1px 10px 20px #000000;
+  color: c.$white;
+  padding-left: 2.5rem;
+  padding-top: 7rem;
+  background: radial-gradient(black, #073521);
+}
+
+.secondContainer {
+  @include a.container-hw;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 5px 10px 18px #000000;
+  background-image: url("../images/pexels-scott-webb-1048035.jpg");
+  @include a.backgroundProp;
+}

@@ -1,0 +1,53 @@
+@use "./colorsFonts" as f;
+
+@mixin backgroundProp {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin userDisplay {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+@mixin flex(
+  $justify-content: false,
+  $flex-direction: false,
+  $align-items: false
+) {
+  display: flex;
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+  @if $flex-direction {
+    flex-direction: $flex-direction;
+  }
+  @if $align-items {
+    align-items: $align-items;
+  }
+}
+
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+@mixin container-hw {
+  width: 26rem;
+  height: 40rem;
+}
+
+@mixin survey-divs {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+@mixin headers {
+  letter-spacing: 0.2rem;
+  font-family: f.$font-family_1;
+}

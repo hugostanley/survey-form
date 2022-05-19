@@ -1,10 +1,28 @@
+$color_1: #ffffff;
+$color_2: rgb(215, 214, 210);
+$color_3: #073521;
+$color_4: white;
+$font-family_1: "Playfair Display", serif;
+$font-family_2: "Source Sans Pro", sans-serif;
+$background-color_1: #256348;
+$background-color_2: rgb(215, 214, 210);
+$background-color_3: rgba(245, 245, 220, 0.842);
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin label {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: none;
 }
-
 body {
   background-image: url("./images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
   background-position: center;
@@ -12,29 +30,26 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
-
 .mainContainer {
-  display: flex;
+  @include flex();
   align-items: center;
   height: 70vh;
   justify-content: center;
   margin-top: 8rem;
   border-radius: 25px;
 }
-
 .firstContainer {
   width: 26rem;
   height: 40rem;
   border-radius: 0px 25px 25px 0px;
   box-shadow: 1px 10px 20px #000000;
-  color: #ffffff;
-  display: flex;
+  color: $color_1;
+  @include flex();
   flex-direction: column;
   padding-left: 2.5rem;
   padding-top: 7rem;
   background: radial-gradient(black, #073521);
 }
-
 .secondContainer {
   width: 26rem;
   height: 40rem;
@@ -45,14 +60,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .header {
   margin-top: -5rem;
   margin-bottom: 2rem;
   margin-left: 0.8rem;
-  color: rgb(215, 214, 210);
+  color: $color_2;
 }
-
 #name-label,
 #email-label {
   width: 17.5rem;
@@ -62,8 +75,7 @@ body {
 #number-label,
 #email-label,
 #name-label {
-  padding: 0.3rem;
-  margin: 0.3rem;
+  @include label();
 }
 
 .userName {
@@ -71,60 +83,52 @@ body {
   flex-direction: column;
   padding: 0.3rem;
 }
-
 .userAge {
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
   width: 44.6%;
 }
-
 .emailAdd {
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
 }
-
 .phoneNum {
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
   width: 44.6%;
 }
-
 .notes {
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
+  display: flex;
   padding-left: 0.8rem;
   margin-top: 0.5rem;
+  label {
+    margin-left: 0rem;
+  }
 }
-.notes label {
-  margin-left: 0rem;
-}
-
 #survey-form {
   margin-top: -1.3rem;
 }
-
 .phoneAge {
   display: flex;
 }
-
 label {
   margin-left: 0.5rem;
   font-size: 0.8rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: rgb(215, 214, 210);
+  font-family: $font-family_2;
+  color: $color_2;
 }
-
 input {
   font-size: 0.8rem;
   border-style: none;
   border-radius: 0.5rem;
-  background-color: rgb(215, 214, 210);
+  background-color: $background-color_2;
 }
-
 .userGender {
   display: flex;
   justify-content: flex-start;
@@ -135,7 +139,6 @@ input {
   margin-bottom: 0.4rem;
   margin-top: 0.4rem;
 }
-
 .trees {
   display: flex;
   gap: 5rem;
@@ -143,39 +146,32 @@ input {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-
 .location {
   padding: 0.1rem;
   padding-left: 0.3rem;
   margin-top: -0.3rem;
 }
-
 #message {
   width: 20rem;
-  background-color: rgb(215, 214, 210);
+  background-color: $background-color_2;
 }
-
 .leftText {
   text-align: right;
   padding: 2rem;
-  color: #073521;
+  color: $color_3;
 }
-
 h1 {
   letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: $font-family_1;
 }
-
 h2 {
   letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: $font-family_1;
 }
-
 h3 {
   letter-spacing: 0.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: $font-family_1;
 }
-
 #submit {
   margin-top: 3rem;
   margin-left: 0.8rem;
@@ -184,34 +180,30 @@ h3 {
   width: 6rem;
   height: 3rem;
   border-radius: 0.5rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $font-family_2;
   font-weight: bold;
-  background-color: #256348;
+  background-color: $background-color_1;
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: white;
+  color: $color_4;
   border-style: none;
   font-size: 1rem;
   justify-content: center;
 }
-
 span {
-  font-family: "Source Sans Pro", sans-serif;
-  color: rgb(215, 214, 210);
+  font-family: $font-family_2;
+  color: $color_2;
 }
-
 .treeItems {
   display: flex;
   text-align: left;
   margin-left: 0.5rem;
 }
-
 .options {
   margin-left: 0.7rem;
   margin-top: 2rem;
 }
-
 #logoSubmit {
   width: 1.5rem;
   height: auto;
@@ -220,9 +212,8 @@ span {
 }
 
 #dropdown {
-  color: rgb(215, 214, 210);
+  color: $color_2;
 }
-
 @media all and (max-width: 1060px) {
   .mainContainer {
     display: flex;
@@ -230,7 +221,6 @@ span {
     justify-content: space-around;
     margin-top: 10rem;
   }
-
   .firstContainer {
     border-radius: 3px 3px 25px 25px;
     padding: 2rem;
@@ -238,29 +228,22 @@ span {
     width: 26rem;
     margin-top: 1rem;
   }
-
   .secondContainer {
     border-radius: 25px 25px 3px 3px;
     height: 30rem;
   }
-
   input {
     font-size: 0.8rem;
   }
-
   label {
     font-size: 0.8rem;
   }
-
   .headerLeft {
-    background-color: rgba(245, 245, 220, 0.842);
+    background-color: $background-color_3;
     width: 21.8rem;
     text-align: center;
   }
-
   .header {
     margin-top: 0.2rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

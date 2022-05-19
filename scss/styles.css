@@ -1,0 +1,476 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+body {
+  background-image: url("../images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-top: 8rem;
+  border-radius: 25px;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+  height: 40rem;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 1px 10px 20px #000000;
+  color: white;
+  padding-left: 2.5rem;
+  padding-top: 7rem;
+  background: radial-gradient(black, #073521);
+}
+
+.secondContainer {
+  width: 26rem;
+  height: 40rem;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 5px 10px 18px #000000;
+  background-image: url("../images/pexels-scott-webb-1048035.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+  color: rgb(215, 214, 210);
+}
+
+#name-label,
+#email-label {
+  width: 17.5rem;
+}
+
+#phone-number-label,
+#number-label,
+#email-label,
+#name-label {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.userName,
+.userAge,
+.emailAdd,
+.phoneNum,
+.notes {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+.userAge,
+.phoneNum {
+  width: 44.6%;
+}
+
+.notes {
+  display: flex;
+  padding-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.notes label {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(215, 214, 210);
+}
+
+label span {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(215, 214, 210);
+}
+
+#survey-form {
+  margin-top: -1.3rem;
+}
+
+.phoneAge {
+  display: flex;
+}
+
+input {
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: rgb(215, 214, 210);
+}
+
+.userGender {
+  display: flex;
+  flex-direction: flex-start;
+  gap: 6rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  width: 15rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.trees {
+  display: flex;
+  gap: 5rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.location {
+  padding: 0.1rem;
+  padding-left: 0.3rem;
+  margin-top: -0.3rem;
+}
+
+#message {
+  width: 20rem;
+  background-color: rgb(215, 214, 210);
+}
+
+.leftText {
+  text-align: right;
+  padding: 2rem;
+  color: #073521;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.2rem;
+  font-family: "Playfair Display", serif;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #073521;
+  color: white;
+  margin-top: 3rem;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+  font-size: 1rem;
+}
+
+.treeItems {
+  display: flex;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.options {
+  margin-left: 0.7rem;
+  margin-top: 2rem;
+}
+
+#logoSubmit {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 0rem;
+  padding: 0;
+}
+
+#dropdown {
+  color: rgb(215, 214, 210);
+}
+
+@media all and (max-width: 1060px) {
+  .mainContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+
+  .firstContainer {
+    border-radius: 3px 3px 25px 25px;
+    padding: 2rem;
+    height: 59rem;
+    width: 26rem;
+    margin-top: 1rem;
+  }
+
+  .secondContainer {
+    border-radius: 25px 25px 3px 3px;
+    height: 30rem;
+  }
+
+  input,
+label {
+    font-size: 0.8rem;
+  }
+
+  .headerLeft {
+    background-color: rgba(245, 245, 220, 0.842);
+    width: 21.8rem;
+    text-align: center;
+  }
+
+  .header {
+    margin-top: 0.2rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+body {
+  background-image: url("../images/bernard-hermant-1nDW7BjBj1s-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-top: 8rem;
+  border-radius: 25px;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+  height: 40rem;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 1px 10px 20px #000000;
+  color: white;
+  padding-left: 2.5rem;
+  padding-top: 7rem;
+  background: radial-gradient(black, #073521);
+}
+
+.secondContainer {
+  width: 26rem;
+  height: 40rem;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 5px 10px 18px #000000;
+  background-image: url("../images/pexels-scott-webb-1048035.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+  color: rgb(215, 214, 210);
+}
+
+#name-label,
+#email-label {
+  width: 17.5rem;
+}
+
+#phone-number-label,
+#number-label,
+#email-label,
+#name-label {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.userName,
+.userAge,
+.emailAdd,
+.phoneNum,
+.notes {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+.userAge,
+.phoneNum {
+  width: 44.6%;
+}
+
+.notes {
+  display: flex;
+  padding-left: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.notes label {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(215, 214, 210);
+}
+
+label span {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(215, 214, 210);
+}
+
+#survey-form {
+  margin-top: -1.3rem;
+}
+
+.phoneAge {
+  display: flex;
+}
+
+input {
+  font-size: 0.8rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: rgb(215, 214, 210);
+}
+
+.userGender {
+  display: flex;
+  flex-direction: flex-start;
+  gap: 6rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  width: 15rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.trees {
+  display: flex;
+  gap: 5rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.location {
+  padding: 0.1rem;
+  padding-left: 0.3rem;
+  margin-top: -0.3rem;
+}
+
+#message {
+  width: 20rem;
+  background-color: rgb(215, 214, 210);
+}
+
+.leftText {
+  text-align: right;
+  padding: 2rem;
+  color: #073521;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.2rem;
+  font-family: "Playfair Display", serif;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #073521;
+  color: white;
+  margin-top: 3rem;
+  margin-left: 0.8rem;
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+  font-size: 1rem;
+}
+
+.treeItems {
+  display: flex;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+.options {
+  margin-left: 0.7rem;
+  margin-top: 2rem;
+}
+
+#logoSubmit {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 0rem;
+  padding: 0;
+}
+
+#dropdown {
+  color: rgb(215, 214, 210);
+}
+
+@media all and (max-width: 1060px) {
+  .mainContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10rem;
+  }
+
+  .firstContainer {
+    border-radius: 3px 3px 25px 25px;
+    padding: 2rem;
+    height: 59rem;
+    width: 26rem;
+    margin-top: 1rem;
+  }
+
+  .secondContainer {
+    border-radius: 25px 25px 3px 3px;
+    height: 30rem;
+  }
+
+  input,
+label {
+    font-size: 0.8rem;
+  }
+
+  .headerLeft {
+    background-color: rgba(245, 245, 220, 0.842);
+    width: 21.8rem;
+    text-align: center;
+  }
+
+  .header {
+    margin-top: 0.2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

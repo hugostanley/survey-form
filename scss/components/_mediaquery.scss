@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as a;
+
+@media all and (max-width: 1060px) {
+  .mainContainer {
+    @include a.flex(space-around, column, false);
+    margin-top: 10rem;
+  }
+
+  .firstContainer {
+    border-radius: 3px 3px 25px 25px;
+    padding: 2rem;
+    height: 59rem;
+    width: 26rem;
+    margin-top: 1rem;
+  }
+
+  .secondContainer {
+    border-radius: 25px 25px 3px 3px;
+    height: 30rem;
+  }
+
+  input,
+  label {
+    font-size: 0.8rem;
+  }
+
+  .headerLeft {
+    background-color: rgba(245, 245, 220, 0.842);
+    width: 21.8rem;
+    text-align: center;
+  }
+
+  .header {
+    margin-top: 0.2rem;
+  }
+}
